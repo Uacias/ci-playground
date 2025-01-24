@@ -7,7 +7,7 @@ on:
 
 jobs:
   say-hello:
-    runs-on: ci-test-1-arc-runner-set
+    runs-on: arc-runner-set
 
     steps:
       - name: Print a message
