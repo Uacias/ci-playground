@@ -1,0 +1,9 @@
+runnerTemplate:
+  podspec:
+    containers:
+      - name: linux-helper
+        image: debian:bullseye-slim
+        command:
+          - sleep
+        args:
+          - "3600"
