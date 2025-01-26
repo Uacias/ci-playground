@@ -191,6 +191,40 @@ template:
       - name: runner
         image: ghcr.io/actions/actions-runner:latest
         command: ["/home/runner/run.sh"]
+      # - name: sequencer
+      #   image: docker.io/filgum0326/madara:sequencer-v0.0.4
+      #   args:
+      #     - "--name"
+      #     - "Madara"
+      #     - "--sequencer"
+      #     - "--chain-config-path"
+      #     - "/usr/local/bin/chain_config.template.yaml"
+      #     - "--base-path"
+      #     - "/madara/data"
+      #     - "--no-l1-sync"
+      #     - "--gateway"
+      #     - "--feeder-gateway-enable"
+      #     - "--gateway-enable"
+      #     - "--strk-gas-price"
+      #     - "0"
+      #     - "--strk-blob-gas-price"
+      #     - "0"
+      #     - "--gas-price"
+      #     - "0"
+      #     - "--blob-gas-price"
+      #     - "0"
+      #     - "--rpc-port"
+      #     - "9945"
+      #     - "--rpc-external"
+      #     ports:
+      #       - containerPort: 9945
+      #         name: rpc
+      #     volumeMounts:
+      #       - name: madara-sequencer
+      #       mountPath: /madara/data
+    volumes:
+      - name: madara-sequencer
+        emptyDir: {}
 
 ## Optional controller service account that needs to have required Role and RoleBinding
 ## to operate this gha-runner-scale-set installation.
