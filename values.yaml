@@ -198,7 +198,7 @@ template:
           - "Madara"
           - "--sequencer"
           - "--chain-config-path"
-          - "/usr/local/bin/chain_config.template.yaml"
+          - "/usr/local/bin/values.yaml"
           - "--base-path"
           - "/madara/data"
           - "--no-l1-sync"
