@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Print a message
         run: echo "Hello, GitHub Actions!!"
-      - name: Sleep for 30 seconds
-        run: sleep 30
+      - name: Sleep for 300 seconds
+        run: sleep 300
